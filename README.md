@@ -104,7 +104,12 @@ Run the configuration script to enable MFP:
 File Structure
 --------------
 
-**FileDescription**wifi-deauth-protection.pyDetects deauthentication attacks using Scapy.wifi-deauth-protection.pyFilters and ignores rogue deauthentication frames.alert-system.pyLogs and notifies the user when an attack is detected.config-script.shConfigures **802.11w MFP** to strengthen security.test\_cases.mdContains test scenarios to validate the detection and mitigation functionalities.
+**FileDescription**
+wifi-deauth-protection.py -> Detects deauthentication attacks using Scapy.
+wifi-deauth-protection.py -> Filters and ignores rogue deauthentication frames.
+alert-system.py -> Logs and notifies the user when an attack is detected.
+config-script.sh -> Configures **802.11w MFP** to strengthen security.
+testCases.md -> Contains test scenarios to validate the detection and mitigation functionalities.
 
 Installation & Usage
 --------------------
