@@ -80,10 +80,31 @@ The definitive solution came with:
 *   **802.11w**: Introduced **Management Frame Protection (MFP)**, which authenticates management frames, including deauthentication messages.
     
 
+How to Use the Solution
+-----------------------
+
+### Detection Phase:
+
+Run the detection system with:
+
+`   python wifi-deauth-protection.py -i wlan0 -v   `
+
+### Mitigation Phase:
+
+Activate the mitigation mechanism to counteract attacks:
+
+`   python wifi-deauth-protection.py -i wlan0 -m   `
+
+### Enabling MFP (Management Frame Protection):
+
+Run the configuration script to enable MFP:
+
+`   sudo bash config-script.sh   `
+
 File Structure
 --------------
 
-**FileDescription**sniffer.pyDetects deauthentication attacks using Scapy.mitigation.pyFilters and ignores rogue deauthentication frames.alert\_system.pyLogs and notifies the user when an attack is detected.config.shConfigures **802.11w MFP** to strengthen security.test\_cases.mdContains test scenarios to validate the detection and mitigation functionalities.
+**FileDescription**wifi-deauth-protection.pyDetects deauthentication attacks using Scapy.wifi-deauth-protection.pyFilters and ignores rogue deauthentication frames.alert-system.pyLogs and notifies the user when an attack is detected.config-script.shConfigures **802.11w MFP** to strengthen security.test\_cases.mdContains test scenarios to validate the detection and mitigation functionalities.
 
 Installation & Usage
 --------------------
@@ -96,15 +117,15 @@ Ensure you have **Python 3+** and required dependencies:
 
 ### Running the Detection System
 
-`   python sniffer.py   `
+`   python wifi-deauth-protection.py   `
 
 ### Running the Mitigation System
 
-`   python mitigation.py   `
+`   python wifi-deauth-protection.py   `
 
 ### Enabling Management Frame Protection (MFP) on a Linux System
 
-`   sudo bash config.sh   `
+`   sudo bash config-script.sh   `
 
 Future Improvements
 -------------------
